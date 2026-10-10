@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D RECON LAB — Sparse-View 3D Object Reconstruction Platform</title>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Three.js + OrbitControls + PLYLoader CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/PLYLoader.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- App Wrapper -->
+  <div class="app-layout">
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-cube logo-icon"></i>
+          <div class="logo-text-group">
+            <span class="logo-title">3D RECON LAB</span>
+            <span class="logo-sub">Sparse 3D Platform</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#home" class="nav-item active" data-page="page-home">
+          <i class="fa-solid fa-house"></i> <span>Dashboard (Home)</span>
+        </a>
+        <a href="#upload" class="nav-item" data-page="page-upload">
+          <i class="fa-solid fa-cloud-arrow-up"></i> <span>Upload Images</span>
+        </a>
+        <a href="#config" class="nav-item" data-page="page-config">
+          <i class="fa-solid fa-sliders"></i> <span>Configuration</span>
+        </a>
+        <a href="#recon" class="nav-item" data-page="page-recon">
+          <i class="fa-solid fa-gears"></i> <span>Reconstruction</span>
+        </a>
+        <a href="#viewer" class="nav-item" data-page="page-viewer">
+          <i class="fa-solid fa-vr-cardboard"></i> <span>3D Viewer</span>
+        </a>
+        <a href="#evaluation" class="nav-item" data-page="page-eval">
+          <i class="fa-solid fa-chart-line"></i> <span>Evaluation</span>
+        </a>
+        <a href="#comparison" class="nav-item" data-page="page-compare">
+          <i class="fa-solid fa-scale-balanced"></i> <span>Comparison</span>
+        </a>
+        <a href="#analysis" class="nav-item" data-page="page-analysis">
+          <i class="fa-solid fa-microscope"></i> <span>Analysis</span>
+        </a>
+        <a href="#history" class="nav-item" data-page="page-history">
+          <i class="fa-solid fa-clock-rotate-left"></i> <span>History & Download</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-indicator" id="systemHealthBadge">
+          <span class="status-dot green"></span>
+          <span class="status-text">System Online</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Top Header Navbar -->
+      <header class="top-header">
+        <div class="header-left">
+          <h2 id="currentPageTitle">Dashboard (Home)</h2>
+        </div>
+        <div class="header-right">
+          <button class="btn btn-primary btn-sm" id="navNewExperimentBtn">
+            <i class="fa-solid fa-plus"></i> New Experiment
+          </button>
+        </div>
+      </header>
+
+      <!-- PAGE 1: Landing Page (Home) -->
+      <section class="page-view active" id="page-home">
+        <div class="hero-card">
+          <div class="hero-text-content">
+            <span class="pill-badge"><i class="fa-solid fa-flask"></i> Capstone Research Platform</span>
+            <h1>Reconstruct the 3D World from Just a Few Images</h1>
+            <p>
+              A comprehensive research platform for sparse-view 3D object reconstruction. Compare classical Structure-from-Motion (COLMAP + Open3D) and neural baseline methods, analyze the effect of view count and viewpoint arrangement, and evaluate results with quantitative metrics.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-lg" onclick="navigateTo('page-upload')">
+                Start New Experiment <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-outline btn-lg" onclick="navigateTo('page-analysis')">
+                <i class="fa-solid fa-book-open"></i> Research Insights
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-graphic">
+            <div class="preview-split-box">
+              <div class="split-side 2d-side">
+                <i class="fa-solid fa-image"></i>
+                <span>Sparse 2D Views (3-6)</span>
+              </div>
+              <div class="split-divider"></div>
+              <div class="split-side 3d-side">
+                <i class="fa-solid fa-cube"></i>
+                <span>3D Reconstructed Mesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Feature Badges -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fa-solid fa-code-compare feature-icon"></i>
+            <h4>Multiple Methods</h4>
+            <p>Classical (SfM/MVS) & Neural PyTorch benchmark comparison.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-images feature-icon"></i>
+            <h4>3–6 Views Setup</h4>
+            <p>Designed specifically for extreme sparse-view inputs.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-chart-column feature-icon"></i>
+            <h4>Quantitative Metrics</h4>
+            <p>Chamfer Distance, F-score, Completeness, Accuracy, & Pose Error.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-vr-cardboard feature-icon"></i>
+            <h4>Interactive 3D Viewer</h4>
+            <p>Side-by-side WebGL orbit, zoom, pan, point cloud, and mesh inspect.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fa-solid fa-lightbulb feature-icon"></i>
+            <h4>Research Insights</h4>
+            <p>Automated view-count vs error trade-off analytics.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 2: Upload Images -->
+      <section class="page-view" id="page-upload">
+        <div class="page-grid-2col">
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fa-solid fa-cloud-arrow-up"></i> Upload Images</h3>
+              <span class="badge" id="uploadCountBadge">0 / 6 uploaded</span>
+            </div>
+            <p class="card-desc">Upload 3–6 images of your target object from different viewpoints.</p>
+
+            <div class="drop-zone" id="dropZone">
+              <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+              <h3>Drag & drop images here</h3>
+              <p>or <span class="highlight-link">click to browse</span></p>
+              <span class="drop-sub">(JPG, PNG, WebP — Max 10MB each)</span>
+              <span class="drop-sub-bold">Minimum 3 images — Maximum 6 images</span>
+              <input type="file" id="fileInput" multiple accept="image/*" class="file-input">
+            </div>
+
+            <!-- Uploaded Images Thumbnails Grid -->
+            <div class="uploaded-list-header">
+              <h4>Uploaded Images (<span id="thumbCount">0</span>/6)</h4>
+              <button class="btn-text-danger" id="btnClearAll"><i class="fa-solid fa-trash-can"></i> Clear All</button>
+            </div>
+            <div class="thumbnails-grid" id="imagePreviews"></div>
+
+            <div class="card-actions">
+              <button class="btn btn-primary" onclick="navigateTo('page-config')">
+                Next: Configuration <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Guidelines Card -->
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fa-solid fa-circle-info"></i> View Guidelines</h3>
+            </div>
+            <ul class="guidelines-list">
+              <li><i class="fa-solid fa-check-circle"></i> Use 3 to 6 clear images around object</li>
+              <li><i class="fa-solid fa-check-circle"></i> Capture from different angular viewpoints (~60°–90° spacing)</li>
+              <li><i class="fa-solid fa-check-circle"></i> Ensure consistent, even lighting across shots</li>
+              <li><i class="fa-solid fa-check-circle"></i> Keep the object in sharp focus</li>
+              <li><i class="fa-solid fa-check-circle"></i> More visual overlap = higher reconstruction accuracy</li>
+            </ul>
+
+            <div class="sample-viewpoint-box">
+              <h4>Target Viewpoint Coverage</h4>
+              <div class="sample-angles-grid">
+                <div class="angle-badge"><i class="fa-solid fa-eye"></i> Front (0°)</div>
+                <div class="angle-badge"><i class="fa-solid fa-eye"></i> Left (72°)</div>
+                <div class="angle-badge"><i class="fa-solid fa-eye"></i> Right (144°)</div>
+                <div class="angle-badge"><i class="fa-solid fa-eye"></i> Back Left (216°)</div>
+                <div class="angle-badge"><i class="fa-solid fa-eye"></i> Back Right (288°)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3: Experiment Configuration -->
+      <section class="page-view" id="page-config">
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-sliders"></i> Experiment Configuration</h3>
+            <span class="card-sub">Set parameters for reconstruction and evaluation</span>
+          </div>
+
+          <div class="config-form-grid">
+            <!-- Basic Settings -->
+            <div class="config-box">
+              <h4>Basic Settings</h4>
+              <div class="form-group">
+                <label for="projectName">Project Name</label>
+                <input type="text" id="projectName" value="Vase_Experiment_01" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="objectCategory">Object Category</label>
+                <select id="objectCategory" class="form-control">
+                  <option value="General Object">General Object</option>
+                  <option value="Artifact / Pottery">Artifact / Pottery</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Sculpture">Sculpture</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="maxDim">Max Image Dimension (px)</label>
+                <select id="maxDim" class="form-control">
+                  <option value="1600">Standard (1600px)</option>
+                  <option value="1200">Fast (1200px)</option>
+                  <option value="2048">High Res (2048px)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Reconstruction Methods -->
+            <div class="config-box">
+              <h4>Reconstruction Methods</h4>
+              <div class="radio-option-card">
+                <input type="radio" id="methodBoth" name="reconMethod" value="both" checked>
+                <label for="methodBoth">
+                  <strong><i class="fa-solid fa-code-compare"></i> Both (Compare)</strong>
+                  <span>Run Classical (COLMAP+Open3D) & Neural (PyTorch baseline) side-by-side.</span>
+                </label>
+              </div>
+              <div class="radio-option-card">
+                <input type="radio" id="methodClassical" name="reconMethod" value="classical">
+                <label for="methodClassical">
+                  <strong><i class="fa-solid fa-cubes"></i> Classical (COLMAP + Open3D)</strong>
+                  <span>Feature matching, Structure-from-Motion, and Open3D meshing.</span>
+                </label>
+              </div>
+              <div class="radio-option-card">
+                <input type="radio" id="methodNeural" name="reconMethod" value="neural">
+                <label for="methodNeural">
+                  <strong><i class="fa-solid fa-brain"></i> Neural (PyTorch Baseline)</strong>
+                  <span>Sparse-view neural implicit reconstruction model.</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Advanced Settings -->
+            <div class="config-box">
+              <h4>Surface Meshing & Advanced Options</h4>
+              <div class="form-group">
+                <label for="meshMethod">Mesh Generation Algorithm</label>
+                <select id="meshMethod" class="form-control">
+                  <option value="ball_pivoting">Ball Pivoting Algorithm (BPA)</option>
+                  <option value="poisson">Poisson Surface Reconstruction (Cropped)</option>
+                  <option value="none">None (Point Cloud Only)</option>
+                </select>
+              </div>
+              <div class="toggle-switch-row">
+                <span>Estimate Camera Poses</span>
+                <input type="checkbox" id="toggleEstimatePoses" checked>
+              </div>
+              <div class="toggle-switch-row">
+                <span>Run Quantitative Evaluation Metrics</span>
+                <input type="checkbox" id="toggleMetrics" checked>
+              </div>
+              <div class="toggle-switch-row">
+                <span>Save Intermediate Results</span>
+                <input type="checkbox" id="toggleIntermediate" checked>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-footer-actions">
+            <button class="btn btn-outline" onclick="navigateTo('page-upload')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+            <button class="btn btn-primary btn-lg" id="btnStartReconstruction">
+              <i class="fa-solid fa-play"></i> Start Reconstruction <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 4: Processing Status (Live Execution) -->
+      <section class="page-view" id="page-recon">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3>Reconstruction in Progress</h3>
+              <p class="card-desc">Please wait while the multi-view reconstruction pipeline processes your images...</p>
+            </div>
+            <span class="job-state-badge badge-processing" id="liveJobStatus">Processing</span>
+          </div>
+
+          <!-- Stepper Pipeline -->
+          <div class="pipeline-stepper">
+            <div class="stepper-step" id="step1">
+              <div class="step-num">1</div>
+              <div class="step-info">
+                <strong>Image Analysis</strong>
+                <span class="step-status">Complete</span>
+              </div>
+            </div>
+            <div class="stepper-step" id="step2">
+              <div class="step-num">2</div>
+              <div class="step-info">
+                <strong>Feature Extraction</strong>
+                <span class="step-status">Complete</span>
+              </div>
+            </div>
+            <div class="stepper-step active" id="step3">
+              <div class="step-num">3</div>
+              <div class="step-info">
+                <strong>Camera Pose Estimation</strong>
+                <span class="step-status">Processing...</span>
+              </div>
+            </div>
+            <div class="stepper-step" id="step4">
+              <div class="step-num">4</div>
+              <div class="step-info">
+                <strong>3D Reconstruction</strong>
+                <span class="step-status">Pending</span>
+              </div>
+            </div>
+            <div class="stepper-step" id="step5">
+              <div class="step-num">5</div>
+              <div class="step-info">
+                <strong>Evaluation</strong>
+                <span class="step-status">Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bar & Timer -->
+          <div class="progress-box">
+            <div class="progress-info">
+              <span id="currentStepLabel">Estimating camera poses using Structure-from-Motion (SfM)...</span>
+              <strong id="progressPctLabel">60%</strong>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progressFill" style="width: 60%;"></div>
+            </div>
+            <div class="timer-info">
+              <span>Elapsed Time: <strong id="elapsedTimer">0m 00s</strong></span>
+              <span>Estimated Remaining: <strong id="estimatedTimer">~0m 45s</strong></span>
+            </div>
+          </div>
+
+          <!-- Live Terminal Logs -->
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span><i class="fa-solid fa-terminal"></i> Live Execution Console</span>
+              <span class="exp-id-tag">ID: <span id="liveJobId">EXP-NONE</span></span>
+            </div>
+            <div class="terminal-body" id="liveTerminalLogs">
+              <div class="log-line">[12:14:21] Loading input images...</div>
+              <div class="log-line">[12:14:23] Extracting SIFT feature descriptors...</div>
+              <div class="log-line">[12:14:26] Matching keypoints across views...</div>
+              <div class="log-line info">[12:14:29] Running COLMAP mapper bundle adjustment...</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 5: 3D Viewer (Results - Hero Comparison) -->
+      <section class="page-view" id="page-viewer">
+        <div class="card">
+          <div class="card-header">
+            <div class="view-mode-tabs">
+              <button class="mode-btn active" id="btnModeClassical"><i class="fa-solid fa-cubes"></i> Classical Result</button>
+              <button class="mode-btn" id="btnModeNeural"><i class="fa-solid fa-brain"></i> Neural Result</button>
+              <button class="mode-btn" id="btnModeSideBySide"><i class="fa-solid fa-columns"></i> Side by Side (Compare)</button>
+            </div>
+            <div class="view-toggles">
+              <button class="toggle-btn active" id="btnPcdMode"><i class="fa-solid fa-braille"></i> Point Cloud</button>
+              <button class="toggle-btn" id="btnMeshMode"><i class="fa-solid fa-draw-polygon"></i> Mesh</button>
+              <button class="toggle-btn" id="btnTexMode"><i class="fa-solid fa-brush"></i> Textured</button>
+            </div>
+          </div>
+
+          <!-- 3D Canvas Viewports -->
+          <div class="viewports-container" id="viewportsContainer">
+            <!-- Classical Viewport -->
+            <div class="viewport-box" id="classicalViewportBox">
+              <div class="viewport-title"><i class="fa-solid fa-cubes"></i> Classical (COLMAP + Open3D)</div>
+              <div class="canvas-holder" id="canvasClassical"></div>
+              <div class="viewport-metrics-strip">
+                <span>Chamfer: <strong id="valChamferCls">0.0182</strong></span>
+                <span>F-score: <strong id="valFscoreCls">0.812</strong></span>
+                <span>Completeness: <strong id="valCompCls">84.5%</strong></span>
+                <span>Runtime: <strong id="valTimeCls">124.6s</strong></span>
+              </div>
+            </div>
+
+            <!-- Neural Viewport -->
+            <div class="viewport-box" id="neuralViewportBox">
+              <div class="viewport-title"><i class="fa-solid fa-brain"></i> Neural (PyTorch Baseline)</div>
+              <div class="canvas-holder" id="canvasNeural"></div>
+              <div class="viewport-metrics-strip highlight-strip">
+                <span>Chamfer: <strong id="valChamferNeu">0.0128</strong></span>
+                <span>F-score: <strong id="valFscoreNeu">0.874</strong></span>
+                <span>Completeness: <strong id="valCompNeu">89.2%</strong></span>
+                <span>Runtime: <strong id="valTimeNeu">98.3s</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 6: Evaluation Metrics -->
+      <section class="page-view" id="page-eval">
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-chart-line"></i> Quantitative Evaluation Metrics</h3>
+            <span class="card-sub">Comparative analysis of reconstruction accuracy and geometric fidelity</span>
+          </div>
+
+          <!-- Metrics Scorecards -->
+          <div class="metrics-score-grid">
+            <div class="scorecard">
+              <span class="score-lbl">Chamfer Distance ↓</span>
+              <span class="score-val" id="evalChamfer">0.0128</span>
+              <span class="score-delta delta-good">-32% (Lower is better)</span>
+            </div>
+            <div class="scorecard">
+              <span class="score-lbl">F-score (threshold=0.01) ↑</span>
+              <span class="score-val" id="evalFscore">0.874</span>
+              <span class="score-delta delta-good">+10% (Higher is better)</span>
+            </div>
+            <div class="scorecard">
+              <span class="score-lbl">Completeness ↑</span>
+              <span class="score-val" id="evalComp">89.2%</span>
+              <span class="score-delta delta-good">+14% (Higher is better)</span>
+            </div>
+            <div class="scorecard">
+              <span class="score-lbl">Accuracy ↑</span>
+              <span class="score-val" id="evalAcc">0.861</span>
+              <span class="score-delta delta-good">+9% (Higher is better)</span>
+            </div>
+            <div class="scorecard">
+              <span class="score-lbl">Runtime ↓</span>
+              <span class="score-val" id="evalRuntime">98.3s</span>
+              <span class="score-delta delta-good">-21% (Faster)</span>
+            </div>
+            <div class="scorecard">
+              <span class="score-lbl">Camera Pose Error ↓</span>
+              <span class="score-val" id="evalPoseErr">2.4°</span>
+              <span class="score-delta delta-good">-37% (Accurate)</span>
+            </div>
+          </div>
+
+          <!-- Charts Grid -->
+          <div class="charts-2col-grid">
+            <div class="chart-box">
+              <h4>Error Distribution Histogram</h4>
+              <div class="canvas-chart-wrapper">
+                <canvas id="chartErrorDist"></canvas>
+              </div>
+            </div>
+            <div class="chart-box">
+              <h4>Spatial Distance Heatmap Analysis</h4>
+              <div class="heatmap-visual-box">
+                <div class="heatmap-bar"></div>
+                <div class="heatmap-labels">
+                  <span>0.00 (Exact match)</span>
+                  <span>0.05</span>
+                  <span>0.10+ (Deviation)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 7: Method & View Comparison -->
+      <section class="page-view" id="page-compare">
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-scale-balanced"></i> Method & View Comparison</h3>
+          </div>
+
+          <div class="chart-full-box">
+            <h4>Reconstruction Quality vs Number of Views (3 to 6)</h4>
+            <div class="canvas-chart-wrapper-large">
+              <canvas id="chartQualityVsViews"></canvas>
+            </div>
+          </div>
+
+          <!-- Reconstructed Models Comparison Grid -->
+          <div class="reconstructed-grid-section">
+            <h4>Visual Quality Across View Counts</h4>
+            <div class="reconstructed-matrix-table">
+              <div class="matrix-row header-row">
+                <span>Method</span>
+                <span>3 Views</span>
+                <span>4 Views</span>
+                <span>5 Views</span>
+                <span>6 Views</span>
+              </div>
+              <div class="matrix-row">
+                <strong class="row-title">Classical (COLMAP)</strong>
+                <div class="matrix-cell"><i class="fa-solid fa-cube"></i><span>Sparse Pts</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-cube"></i><span>Basic Form</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-cube"></i><span>Detailed Mesh</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-cube"></i><span>Full Geometry</span></div>
+              </div>
+              <div class="matrix-row">
+                <strong class="row-title">Neural (PyTorch)</strong>
+                <div class="matrix-cell"><i class="fa-solid fa-brain"></i><span>Smooth Shape</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-brain"></i><span>Clear Surfaces</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-brain"></i><span>High Detail</span></div>
+                <div class="matrix-cell"><i class="fa-solid fa-brain"></i><span>Sharp Geometry</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 8: Experiment Analysis (Research Focus) -->
+      <section class="page-view" id="page-analysis">
+        <div class="card">
+          <div class="card-header">
+            <h3><i class="fa-solid fa-microscope"></i> Research Analysis & Insights</h3>
+          </div>
+
+          <div class="charts-2col-grid">
+            <div class="chart-box">
+              <h4>F-score vs Number of Input Views</h4>
+              <div class="canvas-chart-wrapper">
+                <canvas id="chartFscoreViews"></canvas>
+              </div>
+            </div>
+            <div class="chart-box">
+              <h4>Pipeline Runtime vs View Count</h4>
+              <div class="canvas-chart-wrapper">
+                <canvas id="chartRuntimeViews"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quantitative Results Table -->
+          <div class="table-section">
+            <h4>Quantitative Results Data Table</h4>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Input Views</th>
+                  <th>Chamfer Distance ↓</th>
+                  <th>F-score ↑</th>
+                  <th>Completeness (%) ↑</th>
+                  <th>Runtime (s) ↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>3 Views</td><td>0.0381</td><td>0.712</td><td>73.4%</td><td>42.1s</td></tr>
+                <tr><td>4 Views</td><td>0.0192</td><td>0.812</td><td>84.5%</td><td>56.7s</td></tr>
+                <tr><td>5 Views</td><td>0.0143</td><td>0.874</td><td>89.2%</td><td>78.3s</td></tr>
+                <tr class="highlight-row"><td>6 Views</td><td>0.0118</td><td>0.901</td><td>92.1%</td><td>98.4s</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Key Insights Callout -->
+          <div class="insights-callout-box">
+            <h4><i class="fa-solid fa-lightbulb"></i> Research Key Findings & Insights</h4>
+            <ul>
+              <li><strong>View Count Effect:</strong> Reconstruction quality improves rapidly from 3 to 5 views. Beyond 5 views, gains diminish gradually.</li>
+              <li><strong>Sparse View Advantage:</strong> Neural implicit representations consistently outperform classical SfM when input view count is under 4.</li>
+              <li><strong>Viewpoint Spacing:</strong> Evenly spaced circular camera coverage (~60°–72°) produces significantly fewer artifacts than clustered angles.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 9: Experiment History & Download -->
+      <section class="page-view" id="page-history">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3><i class="fa-solid fa-clock-rotate-left"></i> Experiment History</h3>
+              <p class="card-desc">View, analyze, and download your past experiments.</p>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('page-upload')">
+              <i class="fa-solid fa-plus"></i> New Experiment
+            </button>
+          </div>
+
+          <!-- Experiments Table -->
+          <div class="table-section">
+            <table class="data-table" id="historyTable">
+              <thead>
+                <tr>
+                  <th>Experiment ID</th>
+                  <th>Date & Time</th>
+                  <th>Object</th>
+                  <th>Views</th>
+                  <th>Method</th>
+                  <th>F-score</th>
+                  <th>Chamfer</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="historyTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Multi-format Downloads Panel -->
+          <div class="downloads-panel-card">
+            <h4><i class="fa-solid fa-download"></i> Download Result Artifacts</h4>
+            <div class="checkbox-options-grid">
+              <label><input type="checkbox" id="chkMesh" checked> 3D Mesh (.PLY)</label>
+              <label><input type="checkbox" id="chkPcd" checked> Point Cloud (.PLY)</label>
+              <label><input type="checkbox" id="chkCsv" checked> Evaluation Metrics (.CSV)</label>
+              <label><input type="checkbox" id="chkPoses" checked> Camera Poses (.TXT)</label>
+              <label><input type="checkbox" id="chkReport" checked> JSON Evaluation Report</label>
+            </div>
+            <button class="btn btn-primary btn-lg" id="btnDownloadSelected">
+              <i class="fa-solid fa-file-export"></i> Download Selected Artifacts
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

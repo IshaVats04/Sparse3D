@@ -1,0 +1,50 @@
+{
+  "experiment_name": "dtu_scan1_6views_lighting0",
+  "source_directory": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1",
+  "output_directory": "data\\experiments\\dtu_scan1_6views",
+  "num_images": 6,
+  "images": [
+    {
+      "original_filename": "clean_001_0_r5000.png",
+      "colmap_filename": "image_001.png",
+      "camera_position": 1,
+      "lighting_condition": 0,
+      "index": 1
+    },
+    {
+      "original_filename": "clean_009_0_r5000.png",
+      "colmap_filename": "image_002.png",
+      "camera_position": 9,
+      "lighting_condition": 0,
+      "index": 2
+    },
+    {
+      "original_filename": "clean_017_0_r5000.png",
+      "colmap_filename": "image_003.png",
+      "camera_position": 17,
+      "lighting_condition": 0,
+      "index": 3
+    },
+    {
+      "original_filename": "clean_025_0_r5000.png",
+      "colmap_filename": "image_004.png",
+      "camera_position": 25,
+      "lighting_condition": 0,
+      "index": 4
+    },
+    {
+      "original_filename": "clean_033_0_r5000.png",
+      "colmap_filename": "image_005.png",
+      "camera_position": 33,
+      "lighting_condition": 0,
+      "index": 5
+    },
+    {
+      "original_filename": "clean_041_0_r5000.png",
+      "colmap_filename": "image_006.png",
+      "camera_position": 41,
+      "lighting_condition": 0,
+      "index": 6
+    }
+  ]
+}

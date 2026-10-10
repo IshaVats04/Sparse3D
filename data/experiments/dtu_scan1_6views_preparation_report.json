@@ -1,0 +1,1934 @@
+{
+  "experiment": "dtu_scan1_6views_lighting0",
+  "analysis": {
+    "total_images": 343,
+    "num_cameras": 49,
+    "lighting_per_camera": 7,
+    "camera_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "cameras": {
+      "1": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_0_r5000.png",
+          "camera": 1,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_1_r5000.png",
+          "camera": 1,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_2_r5000.png",
+          "camera": 1,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_3_r5000.png",
+          "camera": 1,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_4_r5000.png",
+          "camera": 1,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_5_r5000.png",
+          "camera": 1,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_001_6_r5000.png",
+          "camera": 1,
+          "lighting": 6
+        }
+      ],
+      "2": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_0_r5000.png",
+          "camera": 2,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_1_r5000.png",
+          "camera": 2,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_2_r5000.png",
+          "camera": 2,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_3_r5000.png",
+          "camera": 2,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_4_r5000.png",
+          "camera": 2,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_5_r5000.png",
+          "camera": 2,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_002_6_r5000.png",
+          "camera": 2,
+          "lighting": 6
+        }
+      ],
+      "3": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_0_r5000.png",
+          "camera": 3,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_1_r5000.png",
+          "camera": 3,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_2_r5000.png",
+          "camera": 3,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_3_r5000.png",
+          "camera": 3,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_4_r5000.png",
+          "camera": 3,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_5_r5000.png",
+          "camera": 3,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_003_6_r5000.png",
+          "camera": 3,
+          "lighting": 6
+        }
+      ],
+      "4": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_0_r5000.png",
+          "camera": 4,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_1_r5000.png",
+          "camera": 4,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_2_r5000.png",
+          "camera": 4,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_3_r5000.png",
+          "camera": 4,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_4_r5000.png",
+          "camera": 4,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_5_r5000.png",
+          "camera": 4,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_004_6_r5000.png",
+          "camera": 4,
+          "lighting": 6
+        }
+      ],
+      "5": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_0_r5000.png",
+          "camera": 5,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_1_r5000.png",
+          "camera": 5,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_2_r5000.png",
+          "camera": 5,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_3_r5000.png",
+          "camera": 5,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_4_r5000.png",
+          "camera": 5,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_5_r5000.png",
+          "camera": 5,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_005_6_r5000.png",
+          "camera": 5,
+          "lighting": 6
+        }
+      ],
+      "6": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_0_r5000.png",
+          "camera": 6,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_1_r5000.png",
+          "camera": 6,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_2_r5000.png",
+          "camera": 6,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_3_r5000.png",
+          "camera": 6,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_4_r5000.png",
+          "camera": 6,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_5_r5000.png",
+          "camera": 6,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_006_6_r5000.png",
+          "camera": 6,
+          "lighting": 6
+        }
+      ],
+      "7": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_0_r5000.png",
+          "camera": 7,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_1_r5000.png",
+          "camera": 7,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_2_r5000.png",
+          "camera": 7,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_3_r5000.png",
+          "camera": 7,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_4_r5000.png",
+          "camera": 7,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_5_r5000.png",
+          "camera": 7,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_007_6_r5000.png",
+          "camera": 7,
+          "lighting": 6
+        }
+      ],
+      "8": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_0_r5000.png",
+          "camera": 8,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_1_r5000.png",
+          "camera": 8,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_2_r5000.png",
+          "camera": 8,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_3_r5000.png",
+          "camera": 8,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_4_r5000.png",
+          "camera": 8,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_5_r5000.png",
+          "camera": 8,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_008_6_r5000.png",
+          "camera": 8,
+          "lighting": 6
+        }
+      ],
+      "9": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_0_r5000.png",
+          "camera": 9,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_1_r5000.png",
+          "camera": 9,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_2_r5000.png",
+          "camera": 9,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_3_r5000.png",
+          "camera": 9,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_4_r5000.png",
+          "camera": 9,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_5_r5000.png",
+          "camera": 9,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_009_6_r5000.png",
+          "camera": 9,
+          "lighting": 6
+        }
+      ],
+      "10": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_0_r5000.png",
+          "camera": 10,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_1_r5000.png",
+          "camera": 10,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_2_r5000.png",
+          "camera": 10,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_3_r5000.png",
+          "camera": 10,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_4_r5000.png",
+          "camera": 10,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_5_r5000.png",
+          "camera": 10,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_010_6_r5000.png",
+          "camera": 10,
+          "lighting": 6
+        }
+      ],
+      "11": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_0_r5000.png",
+          "camera": 11,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_1_r5000.png",
+          "camera": 11,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_2_r5000.png",
+          "camera": 11,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_3_r5000.png",
+          "camera": 11,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_4_r5000.png",
+          "camera": 11,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_5_r5000.png",
+          "camera": 11,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_011_6_r5000.png",
+          "camera": 11,
+          "lighting": 6
+        }
+      ],
+      "12": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_0_r5000.png",
+          "camera": 12,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_1_r5000.png",
+          "camera": 12,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_2_r5000.png",
+          "camera": 12,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_3_r5000.png",
+          "camera": 12,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_4_r5000.png",
+          "camera": 12,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_5_r5000.png",
+          "camera": 12,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_012_6_r5000.png",
+          "camera": 12,
+          "lighting": 6
+        }
+      ],
+      "13": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_0_r5000.png",
+          "camera": 13,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_1_r5000.png",
+          "camera": 13,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_2_r5000.png",
+          "camera": 13,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_3_r5000.png",
+          "camera": 13,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_4_r5000.png",
+          "camera": 13,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_5_r5000.png",
+          "camera": 13,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_013_6_r5000.png",
+          "camera": 13,
+          "lighting": 6
+        }
+      ],
+      "14": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_0_r5000.png",
+          "camera": 14,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_1_r5000.png",
+          "camera": 14,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_2_r5000.png",
+          "camera": 14,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_3_r5000.png",
+          "camera": 14,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_4_r5000.png",
+          "camera": 14,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_5_r5000.png",
+          "camera": 14,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_014_6_r5000.png",
+          "camera": 14,
+          "lighting": 6
+        }
+      ],
+      "15": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_0_r5000.png",
+          "camera": 15,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_1_r5000.png",
+          "camera": 15,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_2_r5000.png",
+          "camera": 15,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_3_r5000.png",
+          "camera": 15,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_4_r5000.png",
+          "camera": 15,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_5_r5000.png",
+          "camera": 15,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_015_6_r5000.png",
+          "camera": 15,
+          "lighting": 6
+        }
+      ],
+      "16": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_0_r5000.png",
+          "camera": 16,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_1_r5000.png",
+          "camera": 16,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_2_r5000.png",
+          "camera": 16,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_3_r5000.png",
+          "camera": 16,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_4_r5000.png",
+          "camera": 16,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_5_r5000.png",
+          "camera": 16,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_016_6_r5000.png",
+          "camera": 16,
+          "lighting": 6
+        }
+      ],
+      "17": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_0_r5000.png",
+          "camera": 17,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_1_r5000.png",
+          "camera": 17,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_2_r5000.png",
+          "camera": 17,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_3_r5000.png",
+          "camera": 17,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_4_r5000.png",
+          "camera": 17,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_5_r5000.png",
+          "camera": 17,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_017_6_r5000.png",
+          "camera": 17,
+          "lighting": 6
+        }
+      ],
+      "18": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_0_r5000.png",
+          "camera": 18,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_1_r5000.png",
+          "camera": 18,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_2_r5000.png",
+          "camera": 18,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_3_r5000.png",
+          "camera": 18,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_4_r5000.png",
+          "camera": 18,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_5_r5000.png",
+          "camera": 18,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_018_6_r5000.png",
+          "camera": 18,
+          "lighting": 6
+        }
+      ],
+      "19": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_0_r5000.png",
+          "camera": 19,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_1_r5000.png",
+          "camera": 19,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_2_r5000.png",
+          "camera": 19,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_3_r5000.png",
+          "camera": 19,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_4_r5000.png",
+          "camera": 19,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_5_r5000.png",
+          "camera": 19,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_019_6_r5000.png",
+          "camera": 19,
+          "lighting": 6
+        }
+      ],
+      "20": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_0_r5000.png",
+          "camera": 20,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_1_r5000.png",
+          "camera": 20,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_2_r5000.png",
+          "camera": 20,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_3_r5000.png",
+          "camera": 20,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_4_r5000.png",
+          "camera": 20,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_5_r5000.png",
+          "camera": 20,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_020_6_r5000.png",
+          "camera": 20,
+          "lighting": 6
+        }
+      ],
+      "21": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_0_r5000.png",
+          "camera": 21,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_1_r5000.png",
+          "camera": 21,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_2_r5000.png",
+          "camera": 21,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_3_r5000.png",
+          "camera": 21,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_4_r5000.png",
+          "camera": 21,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_5_r5000.png",
+          "camera": 21,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_021_6_r5000.png",
+          "camera": 21,
+          "lighting": 6
+        }
+      ],
+      "22": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_0_r5000.png",
+          "camera": 22,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_1_r5000.png",
+          "camera": 22,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_2_r5000.png",
+          "camera": 22,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_3_r5000.png",
+          "camera": 22,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_4_r5000.png",
+          "camera": 22,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_5_r5000.png",
+          "camera": 22,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_022_6_r5000.png",
+          "camera": 22,
+          "lighting": 6
+        }
+      ],
+      "23": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_0_r5000.png",
+          "camera": 23,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_1_r5000.png",
+          "camera": 23,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_2_r5000.png",
+          "camera": 23,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_3_r5000.png",
+          "camera": 23,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_4_r5000.png",
+          "camera": 23,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_5_r5000.png",
+          "camera": 23,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_023_6_r5000.png",
+          "camera": 23,
+          "lighting": 6
+        }
+      ],
+      "24": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_0_r5000.png",
+          "camera": 24,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_1_r5000.png",
+          "camera": 24,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_2_r5000.png",
+          "camera": 24,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_3_r5000.png",
+          "camera": 24,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_4_r5000.png",
+          "camera": 24,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_5_r5000.png",
+          "camera": 24,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_024_6_r5000.png",
+          "camera": 24,
+          "lighting": 6
+        }
+      ],
+      "25": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_0_r5000.png",
+          "camera": 25,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_1_r5000.png",
+          "camera": 25,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_2_r5000.png",
+          "camera": 25,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_3_r5000.png",
+          "camera": 25,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_4_r5000.png",
+          "camera": 25,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_5_r5000.png",
+          "camera": 25,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_025_6_r5000.png",
+          "camera": 25,
+          "lighting": 6
+        }
+      ],
+      "26": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_0_r5000.png",
+          "camera": 26,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_1_r5000.png",
+          "camera": 26,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_2_r5000.png",
+          "camera": 26,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_3_r5000.png",
+          "camera": 26,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_4_r5000.png",
+          "camera": 26,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_5_r5000.png",
+          "camera": 26,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_026_6_r5000.png",
+          "camera": 26,
+          "lighting": 6
+        }
+      ],
+      "27": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_0_r5000.png",
+          "camera": 27,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_1_r5000.png",
+          "camera": 27,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_2_r5000.png",
+          "camera": 27,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_3_r5000.png",
+          "camera": 27,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_4_r5000.png",
+          "camera": 27,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_5_r5000.png",
+          "camera": 27,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_027_6_r5000.png",
+          "camera": 27,
+          "lighting": 6
+        }
+      ],
+      "28": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_0_r5000.png",
+          "camera": 28,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_1_r5000.png",
+          "camera": 28,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_2_r5000.png",
+          "camera": 28,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_3_r5000.png",
+          "camera": 28,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_4_r5000.png",
+          "camera": 28,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_5_r5000.png",
+          "camera": 28,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_028_6_r5000.png",
+          "camera": 28,
+          "lighting": 6
+        }
+      ],
+      "29": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_0_r5000.png",
+          "camera": 29,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_1_r5000.png",
+          "camera": 29,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_2_r5000.png",
+          "camera": 29,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_3_r5000.png",
+          "camera": 29,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_4_r5000.png",
+          "camera": 29,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_5_r5000.png",
+          "camera": 29,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_029_6_r5000.png",
+          "camera": 29,
+          "lighting": 6
+        }
+      ],
+      "30": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_0_r5000.png",
+          "camera": 30,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_1_r5000.png",
+          "camera": 30,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_2_r5000.png",
+          "camera": 30,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_3_r5000.png",
+          "camera": 30,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_4_r5000.png",
+          "camera": 30,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_5_r5000.png",
+          "camera": 30,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_030_6_r5000.png",
+          "camera": 30,
+          "lighting": 6
+        }
+      ],
+      "31": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_0_r5000.png",
+          "camera": 31,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_1_r5000.png",
+          "camera": 31,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_2_r5000.png",
+          "camera": 31,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_3_r5000.png",
+          "camera": 31,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_4_r5000.png",
+          "camera": 31,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_5_r5000.png",
+          "camera": 31,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_031_6_r5000.png",
+          "camera": 31,
+          "lighting": 6
+        }
+      ],
+      "32": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_0_r5000.png",
+          "camera": 32,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_1_r5000.png",
+          "camera": 32,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_2_r5000.png",
+          "camera": 32,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_3_r5000.png",
+          "camera": 32,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_4_r5000.png",
+          "camera": 32,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_5_r5000.png",
+          "camera": 32,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_032_6_r5000.png",
+          "camera": 32,
+          "lighting": 6
+        }
+      ],
+      "33": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_0_r5000.png",
+          "camera": 33,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_1_r5000.png",
+          "camera": 33,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_2_r5000.png",
+          "camera": 33,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_3_r5000.png",
+          "camera": 33,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_4_r5000.png",
+          "camera": 33,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_5_r5000.png",
+          "camera": 33,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_033_6_r5000.png",
+          "camera": 33,
+          "lighting": 6
+        }
+      ],
+      "34": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_0_r5000.png",
+          "camera": 34,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_1_r5000.png",
+          "camera": 34,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_2_r5000.png",
+          "camera": 34,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_3_r5000.png",
+          "camera": 34,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_4_r5000.png",
+          "camera": 34,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_5_r5000.png",
+          "camera": 34,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_034_6_r5000.png",
+          "camera": 34,
+          "lighting": 6
+        }
+      ],
+      "35": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_0_r5000.png",
+          "camera": 35,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_1_r5000.png",
+          "camera": 35,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_2_r5000.png",
+          "camera": 35,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_3_r5000.png",
+          "camera": 35,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_4_r5000.png",
+          "camera": 35,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_5_r5000.png",
+          "camera": 35,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_035_6_r5000.png",
+          "camera": 35,
+          "lighting": 6
+        }
+      ],
+      "36": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_0_r5000.png",
+          "camera": 36,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_1_r5000.png",
+          "camera": 36,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_2_r5000.png",
+          "camera": 36,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_3_r5000.png",
+          "camera": 36,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_4_r5000.png",
+          "camera": 36,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_5_r5000.png",
+          "camera": 36,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_036_6_r5000.png",
+          "camera": 36,
+          "lighting": 6
+        }
+      ],
+      "37": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_0_r5000.png",
+          "camera": 37,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_1_r5000.png",
+          "camera": 37,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_2_r5000.png",
+          "camera": 37,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_3_r5000.png",
+          "camera": 37,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_4_r5000.png",
+          "camera": 37,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_5_r5000.png",
+          "camera": 37,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_037_6_r5000.png",
+          "camera": 37,
+          "lighting": 6
+        }
+      ],
+      "38": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_0_r5000.png",
+          "camera": 38,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_1_r5000.png",
+          "camera": 38,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_2_r5000.png",
+          "camera": 38,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_3_r5000.png",
+          "camera": 38,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_4_r5000.png",
+          "camera": 38,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_5_r5000.png",
+          "camera": 38,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_038_6_r5000.png",
+          "camera": 38,
+          "lighting": 6
+        }
+      ],
+      "39": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_0_r5000.png",
+          "camera": 39,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_1_r5000.png",
+          "camera": 39,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_2_r5000.png",
+          "camera": 39,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_3_r5000.png",
+          "camera": 39,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_4_r5000.png",
+          "camera": 39,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_5_r5000.png",
+          "camera": 39,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_039_6_r5000.png",
+          "camera": 39,
+          "lighting": 6
+        }
+      ],
+      "40": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_0_r5000.png",
+          "camera": 40,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_1_r5000.png",
+          "camera": 40,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_2_r5000.png",
+          "camera": 40,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_3_r5000.png",
+          "camera": 40,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_4_r5000.png",
+          "camera": 40,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_5_r5000.png",
+          "camera": 40,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_040_6_r5000.png",
+          "camera": 40,
+          "lighting": 6
+        }
+      ],
+      "41": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_0_r5000.png",
+          "camera": 41,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_1_r5000.png",
+          "camera": 41,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_2_r5000.png",
+          "camera": 41,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_3_r5000.png",
+          "camera": 41,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_4_r5000.png",
+          "camera": 41,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_5_r5000.png",
+          "camera": 41,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_041_6_r5000.png",
+          "camera": 41,
+          "lighting": 6
+        }
+      ],
+      "42": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_0_r5000.png",
+          "camera": 42,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_1_r5000.png",
+          "camera": 42,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_2_r5000.png",
+          "camera": 42,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_3_r5000.png",
+          "camera": 42,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_4_r5000.png",
+          "camera": 42,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_5_r5000.png",
+          "camera": 42,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_042_6_r5000.png",
+          "camera": 42,
+          "lighting": 6
+        }
+      ],
+      "43": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_0_r5000.png",
+          "camera": 43,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_1_r5000.png",
+          "camera": 43,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_2_r5000.png",
+          "camera": 43,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_3_r5000.png",
+          "camera": 43,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_4_r5000.png",
+          "camera": 43,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_5_r5000.png",
+          "camera": 43,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_043_6_r5000.png",
+          "camera": 43,
+          "lighting": 6
+        }
+      ],
+      "44": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_0_r5000.png",
+          "camera": 44,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_1_r5000.png",
+          "camera": 44,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_2_r5000.png",
+          "camera": 44,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_3_r5000.png",
+          "camera": 44,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_4_r5000.png",
+          "camera": 44,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_5_r5000.png",
+          "camera": 44,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_044_6_r5000.png",
+          "camera": 44,
+          "lighting": 6
+        }
+      ],
+      "45": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_0_r5000.png",
+          "camera": 45,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_1_r5000.png",
+          "camera": 45,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_2_r5000.png",
+          "camera": 45,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_3_r5000.png",
+          "camera": 45,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_4_r5000.png",
+          "camera": 45,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_5_r5000.png",
+          "camera": 45,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_045_6_r5000.png",
+          "camera": 45,
+          "lighting": 6
+        }
+      ],
+      "46": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_0_r5000.png",
+          "camera": 46,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_1_r5000.png",
+          "camera": 46,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_2_r5000.png",
+          "camera": 46,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_3_r5000.png",
+          "camera": 46,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_4_r5000.png",
+          "camera": 46,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_5_r5000.png",
+          "camera": 46,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_046_6_r5000.png",
+          "camera": 46,
+          "lighting": 6
+        }
+      ],
+      "47": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_0_r5000.png",
+          "camera": 47,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_1_r5000.png",
+          "camera": 47,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_2_r5000.png",
+          "camera": 47,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_3_r5000.png",
+          "camera": 47,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_4_r5000.png",
+          "camera": 47,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_5_r5000.png",
+          "camera": 47,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_047_6_r5000.png",
+          "camera": 47,
+          "lighting": 6
+        }
+      ],
+      "48": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_0_r5000.png",
+          "camera": 48,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_1_r5000.png",
+          "camera": 48,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_2_r5000.png",
+          "camera": 48,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_3_r5000.png",
+          "camera": 48,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_4_r5000.png",
+          "camera": 48,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_5_r5000.png",
+          "camera": 48,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_048_6_r5000.png",
+          "camera": 48,
+          "lighting": 6
+        }
+      ],
+      "49": [
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_0_r5000.png",
+          "camera": 49,
+          "lighting": 0
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_1_r5000.png",
+          "camera": 49,
+          "lighting": 1
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_2_r5000.png",
+          "camera": 49,
+          "lighting": 2
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_3_r5000.png",
+          "camera": 49,
+          "lighting": 3
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_4_r5000.png",
+          "camera": 49,
+          "lighting": 4
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_5_r5000.png",
+          "camera": 49,
+          "lighting": 5
+        },
+        {
+          "path": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1\\clean_049_6_r5000.png",
+          "camera": 49,
+          "lighting": 6
+        }
+      ]
+    }
+  },
+  "selection": {
+    "num_views_requested": 6,
+    "num_views_selected": 6,
+    "lighting_condition": 0
+  },
+  "manifest": {
+    "experiment_name": "dtu_scan1_6views_lighting0",
+    "source_directory": "data\\dtu\\SampleSet\\MVS Data\\Cleaned\\scan1",
+    "output_directory": "data\\experiments\\dtu_scan1_6views",
+    "num_images": 6,
+    "images": [
+      {
+        "original_filename": "clean_001_0_r5000.png",
+        "colmap_filename": "image_001.png",
+        "camera_position": 1,
+        "lighting_condition": 0,
+        "index": 1
+      },
+      {
+        "original_filename": "clean_009_0_r5000.png",
+        "colmap_filename": "image_002.png",
+        "camera_position": 9,
+        "lighting_condition": 0,
+        "index": 2
+      },
+      {
+        "original_filename": "clean_017_0_r5000.png",
+        "colmap_filename": "image_003.png",
+        "camera_position": 17,
+        "lighting_condition": 0,
+        "index": 3
+      },
+      {
+        "original_filename": "clean_025_0_r5000.png",
+        "colmap_filename": "image_004.png",
+        "camera_position": 25,
+        "lighting_condition": 0,
+        "index": 4
+      },
+      {
+        "original_filename": "clean_033_0_r5000.png",
+        "colmap_filename": "image_005.png",
+        "camera_position": 33,
+        "lighting_condition": 0,
+        "index": 5
+      },
+      {
+        "original_filename": "clean_041_0_r5000.png",
+        "colmap_filename": "image_006.png",
+        "camera_position": 41,
+        "lighting_condition": 0,
+        "index": 6
+      }
+    ]
+  },
+  "calibration": {
+    "exists": true,
+    "directory": "data\\dtu\\SampleSet\\MVS Data\\Calibration",
+    "files": []
+  }
+}
