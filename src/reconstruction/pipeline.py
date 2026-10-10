@@ -30,6 +30,7 @@ import numpy as np
 
 from . import config as cfg
 from .colmap_model import SparseModel, count_registered_images, read_model_txt, rotmat_to_qvec
+from .dense_cpu import dense_cpu
 from .metrics import (
     align_by_cameras,
     decompose_projection,
@@ -396,10 +397,24 @@ class ReconstructionPipeline:
                 pcd = o3d.io.read_point_cloud(tmp)
                 if len(pcd.points) > 0:
                     return pcd, "dense"
-            self.log("Dense MVS failed; falling back to the sparse point cloud", "WARNING")
+            self.log("COLMAP dense MVS failed; densifying on the CPU instead", "WARNING")
         else:
-            self.log("Dense MVS skipped (needs a CUDA-enabled COLMAP and an NVIDIA GPU, e.g. a Colab worker); "
-                     "using the sparse SfM point cloud", "WARNING")
+            self.log("COLMAP dense MVS needs a CUDA GPU (e.g. a Colab worker); densifying on the CPU with stereo "
+                     "matching on the COLMAP poses instead")
+        try:
+            out = dense_cpu(model, self.images_dir, self.preset["dense_cpu_side"], self.log,
+                            self.cancel_event.is_set)
+        except Exception as exc:
+            if self.cancel_event.is_set():
+                raise Cancelled()
+            self.log(f"CPU dense stereo failed ({exc})", "WARNING")
+            out = None
+        if out is not None and len(out[0]) >= 1000:
+            pcd = o3d.geometry.PointCloud()
+            pcd.points = o3d.utility.Vector3dVector(out[0])
+            pcd.colors = o3d.utility.Vector3dVector(out[1])
+            return pcd, "dense_cpu"
+        self.log("CPU dense stereo produced too little; using the sparse SfM point cloud", "WARNING")
         pts = np.array([p.xyz for p in model.points3D.values()])
         cols = np.array([p.rgb for p in model.points3D.values()])
         pcd = o3d.geometry.PointCloud()
@@ -559,8 +574,9 @@ class ReconstructionPipeline:
                 try:
                     pcd, mode = self._classical_cloud(model)
                     pcd = self._clean_cloud(pcd)
-                    note = ("Dense multi-view stereo point cloud" if mode == "dense"
-                            else "Sparse SfM point cloud (dense MVS needs a CUDA GPU; e.g. a Colab worker)")
+                    note = {"dense": "Dense multi-view stereo point cloud (COLMAP PatchMatch, GPU)",
+                            "dense_cpu": "Dense point cloud from stereo matching on the COLMAP poses (CPU)",
+                            "sparse": "Sparse SfM point cloud only (dense stereo produced too little)"}[mode]
                     results["classical"] = self._finish_method(
                         "classical", pcd, analysis_sec + sfm_sec, time.time() - c0, "", note,
                         self._registration(model), self._model_cameras(model))

@@ -75,7 +75,7 @@ export default function Landing() {
                 <HeroScene />
               </Suspense>
             </ErrorBoundary>
-            <span className="absolute left-3 top-3 rounded-md bg-black/40 px-2 py-1 text-[11px] text-slate-300">Textured | Wireframe</span>
+            <span className="absolute left-3 top-3 rounded-md bg-black/40 px-2 py-1 text-[11px] text-slate-300">Illustration, not a reconstruction result</span>
           </div>
         </div>
       </section>

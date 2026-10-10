@@ -15,6 +15,17 @@ class Camera:
     height: int
     params: List[float]
 
+    def distortion(self) -> np.ndarray:
+        """OpenCV distortion coefficients (k1, k2, p1, p2) for the radial and OpenCV COLMAP models."""
+        p = self.params
+        if self.model == "SIMPLE_RADIAL":
+            return np.array([p[3], 0.0, 0.0, 0.0])
+        if self.model == "RADIAL":
+            return np.array([p[3], p[4], 0.0, 0.0])
+        if self.model in ("OPENCV", "FULL_OPENCV"):
+            return np.array([p[4], p[5], p[6], p[7]])
+        return np.zeros(4)
+
     def intrinsics(self) -> np.ndarray:
         """3x3 pinhole intrinsics (lens distortion is ignored)."""
         p = self.params

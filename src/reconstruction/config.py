@@ -35,9 +35,12 @@ DB_PATH = Path(os.environ.get("SPARSE3D_DB", DATA_ROOT / "workspace" / "experime
 
 # Per-quality settings: image long side, SIFT features per image, Poisson depth, dense (MVS) window
 QUALITY_PRESETS: Dict[str, Dict[str, int]] = {
-    "fast": {"max_image_dim": 1024, "max_features": 4096, "poisson_depth": 7, "depth_stride": 6},
-    "standard": {"max_image_dim": 1600, "max_features": 8192, "poisson_depth": 8, "depth_stride": 4},
-    "high": {"max_image_dim": 2400, "max_features": 16384, "poisson_depth": 9, "depth_stride": 2},
+    "fast": {"max_image_dim": 1024, "max_features": 4096, "poisson_depth": 7, "depth_stride": 6,
+             "dense_cpu_side": 640},
+    "standard": {"max_image_dim": 1600, "max_features": 8192, "poisson_depth": 8, "depth_stride": 4,
+                 "dense_cpu_side": 960},
+    "high": {"max_image_dim": 2400, "max_features": 16384, "poisson_depth": 9, "depth_stride": 2,
+             "dense_cpu_side": 1400},
 }
 
 

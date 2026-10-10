@@ -19,7 +19,7 @@ Research questions: RQ1 (3 to 6 views), RQ2 (arrangement / overlap), RQ3 (classi
 3. **Features and matching**: COLMAP SIFT + exhaustive matching, single shared camera.
 4. **Camera poses**: COLMAP incremental mapper with relaxed thresholds for sparse input; the model with the most registered views is kept.
 5. **Reconstruction**
-   * Classical: dense MVS (PatchMatch + fusion) when COLMAP has CUDA and an NVIDIA GPU is present, otherwise the sparse SfM cloud; statistical outlier removal; optional Poisson / ball-pivoting meshing.
+   * Classical: dense MVS (PatchMatch + fusion) when COLMAP has CUDA and an NVIDIA GPU is present, otherwise a CPU plane-sweep multi-view stereo on the COLMAP poses (dense, photo-consistency over depth planes with cross-view depth checks), falling back to the sparse SfM cloud; statistical outlier removal; optional Poisson / ball-pivoting meshing.
    * Neural (preferred, VGGT): one feed-forward pass over all views predicts camera poses, depth and confidence without SfM; depth is unprojected with the predicted cameras, low-confidence pixels (below the 30th percentile) are dropped, and the cloud is thinned to 400k points. Works when COLMAP cannot register the views.
    * Neural (fallback, depth fusion): pretrained monocular depth (Depth Anything V2 Small) -> per-view affine fit of inverse depth to the SfM points (robust least squares) -> back-projection with the SfM poses inside the region covered by SfM points -> fusion -> outlier removal.
 6. **Evaluation** (below).

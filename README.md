@@ -156,7 +156,7 @@ photos (3-6)  or  views chosen from a local dataset
 [4] Reconstruction                                          unproject depth with predicted      |
       GPU:  undistort -> PatchMatch stereo -> fusion        cameras, drop low confidence        |
             (dense cloud, min 2 consistent pixels)                          |                   |
-      CPU:  sparse SfM cloud                                                |                   |
+      CPU:  plane-sweep multi-view stereo on the COLMAP poses (dense, no GPU needed)                                                |                   |
       depth-fusion fallback: monocular depth fitted to SfM points           |                   |
    v                                                                        v                   |
    outlier filtering -> normals -> optional Poisson / ball-pivoting mesh  (both methods)         |
@@ -175,7 +175,7 @@ Which method to use:
 | 5-6 well-overlapping views, GPU available | **Classical** on a GPU (dense MVS + mesh): geometrically the most accurate where the views see the surface |
 | 3-4 views, wide baselines, or SfM fails | **Neural (VGGT)**: needs no SfM and still produces cameras and a dense cloud |
 | Research comparison | **Both**: same input, same evaluation, side by side |
-| No GPU | Connect a Colab worker (Settings > Execution); locally you get the sparse SfM cloud |
+| No GPU | Local CPU dense stereo on the COLMAP poses works; connect a Colab worker (Settings > Execution) for COLMAP PatchMatch and VGGT |
 
 Reconstruction fidelity is bounded by what the photographs show. Surfaces that no view sees (the back of an object with
 three front views) are not measured by COLMAP and are only inferred by the neural model, so no setting makes a 3-to-6 photo
@@ -198,7 +198,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). A `Dockerfile` builds the UI and API (CP
 - With 3 or 4 views, SfM often registers only some views or none; this is part of what the framework measures.
 - Reference metrics assume the model and the reconstruction describe the same object, and they are not the official DTU benchmark protocol.
 - The VGGT backend works without SfM; the depth-fusion fallback needs a successful SfM and fuses only the region covered by SfM points.
-- Dense MVS needs a CUDA GPU; on CPU the classical result is the sparse SfM cloud.
+- COLMAP's own dense stage (PatchMatch) needs a CUDA GPU. Without one, a CPU plane-sweep stereo densifies the COLMAP result; it is slower (about 3 minutes for 6 views), and weaker on plain, dark or glossy surfaces with no texture to match.
 
 ## Citation
 
@@ -207,3 +207,4 @@ If you use the classical baseline, cite COLMAP: J. L. Schoenberger and J.-M. Fra
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
