@@ -1,0 +1,36 @@
+[project]
+name = "sparse3d"
+version = "0.3.0"
+description = "Sparse-view 3D object reconstruction and evaluation: classical SfM/MVS versus learned depth priors"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.10",
+    "opencv-python>=4.5",
+    "open3d>=0.18",
+    "Pillow>=8.0",
+    "fastapi>=0.95",
+    "uvicorn>=0.20",
+    "python-multipart>=0.0.6",
+]
+
+[project.optional-dependencies]
+neural = ["torch>=2.2", "torchvision>=0.17", "transformers>=4.40"]
+heic = ["pillow-heif>=0.16"]
+dev = ["pytest>=7", "httpx>=0.23", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["frontend", "tools", ".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E402"]  # scripts add the repository root to sys.path before importing the package

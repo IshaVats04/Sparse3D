@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-ink-950 font-sans text-slate-200 antialiased;
+  background-image:
+    radial-gradient(900px 500px at 85% -10%, rgba(99, 102, 241, 0.12), transparent 60%),
+    radial-gradient(700px 400px at -5% 10%, rgba(59, 130, 246, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.45);
+}
+
+/* Keyboard focus ring for every interactive element */
+:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-line bg-ink-800/90 shadow-card;
+  }
+  .card-pad {
+    @apply p-5;
+  }
+  .field {
+    @apply w-full rounded-lg border border-line bg-ink-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500
+      transition-colors hover:border-line-strong focus:border-brand-blue focus:outline-none;
+  }
+  .gradient-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  .grad-btn {
+    @apply bg-brand-gradient text-white shadow-[0_6px_20px_rgba(99,102,241,0.35)] hover:brightness-110;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wide text-slate-400;
+  }
+  .th {
+    @apply whitespace-nowrap px-3 py-2.5 text-left text-xs font-medium uppercase tracking-wide text-slate-400;
+  }
+  .td {
+    @apply px-3 py-3 text-sm text-slate-200;
+  }
+}
+
+/* Scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #323b73 transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #323b73;
+  border-radius: 8px;
+}
+
+/* Custom range input */
+input[type='range'] {
+  accent-color: #6366f1;
+}
+
+/* Shimmer skeleton */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  @apply rounded-md bg-ink-700;
+}
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.12), transparent);
+  animation: shimmer 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after,
+  .animate-pulseDot,
+  .animate-spin {
+    animation: none !important;
+  }
+}

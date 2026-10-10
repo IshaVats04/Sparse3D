@@ -1,73 +1,45 @@
-"""Unit tests for Image Validation and Preprocessing."""
+"""Pipeline stage 1: image analysis, view selection and preprocessing (needs no COLMAP)."""
 
-import os
-import tempfile
-import numpy as np
 import cv2
-import pytest
-from pathlib import Path
 
 from src.reconstruction.pipeline import ReconstructionPipeline
+from tests.conftest import textured_image
 
 
-@pytest.fixture
-def temp_images_dir():
-    """Create a temporary directory with valid and invalid sample images."""
-    with tempfile.TemporaryDirectory() as tmpdir:
-        tmp_path = Path(tmpdir)
-        
-        # Create 3 valid synthetic images
-        img1_path = tmp_path / "img1.png"
-        img2_path = tmp_path / "img2.png"
-        img3_path = tmp_path / "img3.png"
-        
-        cv2.imwrite(str(img1_path), np.random.randint(0, 255, (200, 200, 3), dtype=np.uint8))
-        cv2.imwrite(str(img2_path), np.random.randint(0, 255, (200, 200, 3), dtype=np.uint8))
-        cv2.imwrite(str(img3_path), np.random.randint(0, 255, (200, 200, 3), dtype=np.uint8))
-
-        # Create a corrupt file
-        corrupt_path = tmp_path / "corrupt.png"
-        with open(corrupt_path, "w") as f:
-            f.write("NOT_AN_IMAGE_FILE")
-
-        yield {
-            "root": tmp_path,
-            "valid": [img1_path, img2_path, img3_path],
-            "corrupt": corrupt_path
-        }
+def make_pipeline(tmp_path, paths, **opts):
+    return ReconstructionPipeline("t1", paths, tmp_path / "ws", tmp_path / "out", options=opts)
 
 
-def test_image_validation_success(temp_images_dir):
-    """Test validation with 3 valid synthetic images."""
-    valid_paths = temp_images_dir["valid"]
-    workspace = temp_images_dir["root"] / "workspace"
-    output = temp_images_dir["root"] / "output"
-
-    pipeline = ReconstructionPipeline(
-        job_id="test_job_val",
-        input_image_paths=valid_paths,
-        workspace_dir=workspace,
-        output_dir=output,
-        max_image_dim=1000
-    )
-
-    success = pipeline.validate_and_preprocess_images()
-    assert success is True
-    assert len(list(pipeline.images_dir.glob("*.png"))) == 3
+def test_stage1_selects_subset_and_resizes(tmp_path):
+    paths = []
+    for i in range(5):
+        p = tmp_path / f"in_{i}.png"
+        cv2.imwrite(str(p), textured_image(i, (1800, 1200)))
+        paths.append(p)
+    pipe = make_pipeline(tmp_path, paths, num_views=3, view_arrangement="uniform", quality="fast")
+    assert pipe.stage_image_analysis()
+    assert len(pipe.selected) == 3
+    processed = sorted((tmp_path / "ws" / "t1" / "images").glob("*.png"))
+    assert len(processed) == 3
+    for f in processed:
+        h, w = cv2.imread(str(f)).shape[:2]
+        assert max(h, w) <= 1024  # 'fast' preset
+    assert set(pipe.name_map.values()) == set(pipe.selected)
 
 
-def test_image_validation_insufficient_images(temp_images_dir):
-    """Test validation fails when fewer than 3 images are provided."""
-    only_two_paths = temp_images_dir["valid"][:2]
-    workspace = temp_images_dir["root"] / "workspace"
-    output = temp_images_dir["root"] / "output"
+def test_stage1_fails_with_too_few_usable_images(tmp_path):
+    good = tmp_path / "ok.png"
+    cv2.imwrite(str(good), textured_image(1))
+    bad1, bad2 = tmp_path / "b1.png", tmp_path / "b2.png"
+    bad1.write_bytes(b"junk")
+    bad2.write_bytes(b"junk")
+    pipe = make_pipeline(tmp_path, [good, bad1, bad2])
+    assert not pipe.stage_image_analysis()
 
-    pipeline = ReconstructionPipeline(
-        job_id="test_job_insufficient",
-        input_image_paths=only_two_paths,
-        workspace_dir=workspace,
-        output_dir=output
-    )
 
-    success = pipeline.validate_and_preprocess_images()
-    assert success is False
+def test_invalid_options_are_rejected(tmp_path):
+    import pytest
+    with pytest.raises(ValueError):
+        make_pipeline(tmp_path, [], recon_method="magic")
+    with pytest.raises(ValueError):
+        make_pipeline(tmp_path, [], quality="ultra")

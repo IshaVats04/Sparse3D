@@ -1,0 +1,9 @@
+-r requirements.txt
+# CPU-only PyTorch wheels (smaller): pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# CUDA builds: https://pytorch.org
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.40.0
+huggingface_hub>=0.23.0
+# VGGT (preferred neural backend). Not on PyPI; installed from GitHub.
+git+https://github.com/facebookresearch/vggt.git
