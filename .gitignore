@@ -83,5 +83,9 @@ outputs/*
 *.bin
 *.model
 
+# Internal backups
+.git_backup/
+
+
 # Reports (optional - uncomment if you don't want to track them)
 # *_report.json
