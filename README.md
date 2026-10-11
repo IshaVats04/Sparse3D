@@ -33,27 +33,51 @@ need a reference model, either a dataset's ground truth or one you upload. Camer
 (DTU calibration). Registration ratio, reprojection error, point count, runtime and the floating-artifact estimate are
 always measured. See [docs/methodology.md](docs/methodology.md).
 
-## Installation
+## Getting the code
 
-Requirements: Python 3.10+, [COLMAP](https://colmap.github.io/install.html), Node 18+ (only to build the UI).
+First time (clone):
+
+```bash
+git clone https://github.com/IshaVats04/Sparse3D.git
+cd Sparse3D
+```
+
+Already cloned (get the latest version):
+
+```bash
+cd Sparse3D
+git pull origin main
+```
+
+If `git pull` complains about local changes, keep them with `git stash`, then `git pull origin main`, then `git stash pop`.
+To throw away every local change and match GitHub exactly: `git fetch origin && git reset --hard origin/main` (this deletes uncommitted work).
+Check which version you have with `git log --oneline -1`; the latest commit is shown at https://github.com/IshaVats04/Sparse3D/commits/main.
+
+## Quick start
+
+Requirements: Python 3.10+, Node.js 18+ (to build the web UI), and [COLMAP](https://colmap.github.io/install.html).
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate                       # Linux/macOS: source .venv/bin/activate
-pip install -r requirements.txt              # engine + API
-pip install -r requirements-neural.txt       # optional: neural method (PyTorch, transformers)
-cd frontend && npm install && npm run build && cd ..
+python run.py
 ```
+
+`run.py` is the one command to use, every time, on a fresh clone and after every `git pull`. It installs missing Python
+packages, builds the web UI when it is missing or older than its sources, picks a free port (so an older server still
+running can never hide the new one), starts the app and opens the browser. It prints the address to open.
 
 COLMAP is found through `SPARSE3D_COLMAP`, then `tools/colmap/bin`, then `PATH`.
 Windows: unzip a [release](https://github.com/colmap/colmap/releases) into `tools/colmap`. Linux: `sudo apt install colmap`. macOS: `brew install colmap`.
+Optional neural method: `pip install -r requirements-neural.txt`.
 
 ## Usage
 
 ### Web application
 
 ```bash
-python src/backend/app.py          # http://localhost:8000  (API docs at /docs)
+python run.py                      # recommended: checks, builds, starts (http://localhost:8000)
+python src/backend/app.py          # starts only the server; API docs at /docs
 ```
 
 For UI development run `npm run dev` in `frontend/` (Vite proxies `/api` to port 8000).
@@ -124,11 +148,11 @@ If you pulled this version over an older one and still see the old UI or old beh
 How to check you are on the new version: the start-up line prints `Sparse3D 3.0.0 | web UI: built`, and
 `http://localhost:8000/api/health` returns `"version": "3.0.0"` (the old backend returned `2.0.0`).
 
+All four are handled automatically by:
+
 ```bash
-git pull
-pip install -r requirements.txt
-cd frontend && npm install && npm run build && cd ..
-python src/backend/app.py
+git pull origin main
+python run.py
 ```
 
 ## System architecture
