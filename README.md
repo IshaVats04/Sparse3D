@@ -109,6 +109,28 @@ The neural weights are downloaded once from huggingface.co. If that host is unre
 `GET /api/health` reports `neural_available: false` with the reason and the UI marks the method unavailable instead of
 producing a result. Colab does not have that restriction.
 
+## Updating an existing checkout / troubleshooting
+
+If you pulled this version over an older one and still see the old UI or old behaviour, one of these is the cause:
+
+1. **An old server is still running.** It keeps answering on port 8000 and your browser shows it. Stop every old
+   Python/uvicorn process (Windows: `Get-NetTCPConnection -LocalPort 8000 | % { Stop-Process -Id $_.OwningProcess -Force }`),
+   then start again. The current server refuses to start on a busy port and says so.
+2. **The UI was not built.** `frontend/dist` is git-ignored and must be built on each machine:
+   `cd frontend && npm install && npm run build`. Without it, `http://localhost:8000/` shows a short JSON note instead of the UI.
+3. **Old dependencies.** After `git pull`: `pip install -r requirements.txt` (new packages such as `httpx` were added).
+4. **The browser cached the old page.** Hard-refresh (Ctrl+F5) or open a private window.
+
+How to check you are on the new version: the start-up line prints `Sparse3D 3.0.0 | web UI: built`, and
+`http://localhost:8000/api/health` returns `"version": "3.0.0"` (the old backend returned `2.0.0`).
+
+```bash
+git pull
+pip install -r requirements.txt
+cd frontend && npm install && npm run build && cd ..
+python src/backend/app.py
+```
+
 ## System architecture
 
 ```

@@ -510,7 +510,8 @@ if FRONTEND_DIST.is_dir():
         candidate = (FRONTEND_DIST / full_path).resolve()
         if full_path and candidate.is_file() and FRONTEND_DIST.resolve() in candidate.parents:
             return FileResponse(candidate)
-        return FileResponse(FRONTEND_DIST / "index.html")
+        # index.html must never be cached, otherwise a browser keeps showing an older build of the UI
+        return FileResponse(FRONTEND_DIST / "index.html", headers={"Cache-Control": "no-cache"})
 else:
     @app.get("/", include_in_schema=False)
     def root():
@@ -520,6 +521,7 @@ else:
 
 if __name__ == "__main__":
     import argparse
+    import socket
 
     import uvicorn
 
@@ -527,4 +529,16 @@ if __name__ == "__main__":
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
     args = ap.parse_args()
+
+    with socket.socket() as probe:
+        if probe.connect_ex(("127.0.0.1", args.port)) == 0:
+            sys.exit(f"Port {args.port} is already in use, most likely by an older Sparse3D server that is still "
+                     f"running (that server is what your browser would show). Stop it, or start this one with "
+                     f"--port {args.port + 1}.")
+
+    ui = "built" if FRONTEND_DIST.is_dir() else "NOT built (run 'npm install && npm run build' in frontend/)"
+    print(f"Sparse3D {VERSION} | web UI: {ui} | COLMAP: {cfg.find_colmap() or 'not found'} | "
+          f"data: {cfg.DATA_ROOT}")
+    print(f"Open http://{'localhost' if args.host in ('127.0.0.1', '0.0.0.0') else args.host}:{args.port}  "
+          f"(check {VERSION} at /api/health)")
     uvicorn.run(app, host=args.host, port=args.port)
